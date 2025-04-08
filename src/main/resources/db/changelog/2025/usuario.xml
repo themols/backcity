@@ -1,0 +1,32 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet id="1" author="dev">
+        <createTable tableName="usuarios">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="nome" type="VARCHAR(255)"/>
+            <column name="username" type="VARCHAR(255)"/>
+            <column name="email" type="VARCHAR(255)"/>
+            <column name="senha" type="VARCHAR(255)"/>
+            <column name="tipo_usuario" type="VARCHAR(50)"/>
+            <column name="status" type="BOOLEAN"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="2" author="dev">
+        <insert tableName="usuarios">
+            <column name="id" value="1"/>
+            <column name="nome" value="admin"/>
+            <column name="username" value="ems"/>
+            <column name="email" value="admin@ems.eu"/>
+            <column name="senha" value="$2a$10$4xbBK9xVYxDdJMyYGokJVOtoWSyUHn0eITdk6znThydzSpOz5UwYO"/>
+            <column name="tipo_usuario" value="ADMINISTRADOR"/>
+            <column name="status" valueBoolean="true"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

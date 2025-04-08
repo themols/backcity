@@ -1,0 +1,25 @@
+<!--
+ *  Copyright (c) 2015, Facebook, Inc.
+ *  All rights reserved.
+ *
+ *  This source code is licensed under the license found in the
+ *  LICENSE file in the root directory of this source tree.
+ *
+-->
+<!DOCTYPE html>
+<html>
+<body>
+<div id="sandbox" style="position:absolute;top:0;right:0;bottom:0;left:0"></div>
+<script src="https://embeddable-sandbox.cdn.apollographql.com/_latest/embeddable-sandbox.umd.production.min.js"></script>
+<script>
+  new window.EmbeddedSandbox({
+    target: "#sandbox",
+    // Pass through your server href if you are embedding on an endpoint.
+    // Otherwise, you can pass whatever endpoint you want Sandbox to start up with here.
+    initialEndpoint: window.location.origin + "/api/v1/graphql",
+
+  });
+  // advanced options: https://www.apollographql.com/docs/studio/explorer/sandbox#embedding-sandbox
+</script>
+</body>
+</html>
